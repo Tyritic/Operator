@@ -1,0 +1,16 @@
+operator:
+  port: 8081
+  #jwt令牌配置
+  jwt:
+    userSecretKey: "the shy"
+    userTtl: 7200000
+    userTokenName: "token"
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: 39.108.93.27
+    port: 3306
+    database: Discover_fun
+    username: root
+    password: '!Micerlabs2020'
+

@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: dev
+  #数据库配置
+  datasource:
+    driver-class-name: ${operator.datasource.driver-class-name}
+    url: jdbc:mysql://${operator.datasource.host}:${operator.datasource.port}/${operator.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: ${operator.datasource.username}
+    password: ${operator.datasource.password}
+
+server:
+  port: ${operator.port}
+
+operator:
+  #jwt配置
+  jwt:
+    userSecretKey: ${operator.jwt.userSecretKey}
+    userTtl: ${operator.jwt.userTtl}
+    userTokenName: ${operator.jwt.userTokenName}
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+
